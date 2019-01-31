@@ -9,15 +9,13 @@ def get_by_name(name):
     prefix = "input/xml/"
     sysNo = ""
     try:
-        root = etree.parse(prefix + name).getroot()
+        root = etree.parse(prefix + name, etree.XMLParser(load_dtd=True)).getroot()
         print(etree.tostring(root))
         sysNo = root.get("catalogue_id")
         print(sysNo)
         print("got file by name.\n")
     except OSError:
         print("Could not read File: " + name + "\n")
-    except:
-        print("Syntax Issue!?!")
     return sysNo
 
 
