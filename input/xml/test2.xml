@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<letter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../Schema_and_DTD/letter.xsd"
+        page_id="156"
+        title="1707-10-27_Bernoulli_Johann-Bignon_Jean-Paul"
+        catalogue_id="000055569"
+        date="1707.10.27">
+   <persons>
+      <author>
+         <person>
+            <gnd>(DE-588)118509969</gnd>
+            <name>Bernoulli, Johann,</name>
+            <date>1667-1748</date>
+         </person>
+      </author>
+      <recipient>
+         <person>
+            <gnd>no_GND</gnd>
+            <name>Bignon, Jean-Paul,</name>
+            <date>1662-1743,</date>
+         </person>
+      </recipient>
+      <mentioned>
+         <person>
+            <gnd>(DE-588)117239011</gnd>
+            <name>Junius, Ulrich</name>
+            <date>1670-1726</date>
+         </person>
+         <person>
+            <gnd>no_GND</gnd>
+            <name>Varignon, Pierre</name>
+            <date>1654-1722</date>
+         </person>
+      </mentioned>
+   </persons>
+   <text>
+      <p>
+Monsieur </p>
+      <p>Permett </p>
+   </text>
+</letter>

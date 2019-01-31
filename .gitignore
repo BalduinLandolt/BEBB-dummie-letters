@@ -1,2 +1,5 @@
 *.xml
 *.iml
+
+!input/xml/test.xml
+!input/xml/test2.xml

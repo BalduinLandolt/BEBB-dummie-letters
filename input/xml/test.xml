@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<letter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../Schema_and_DTD/letter.xsd"
+        page_id="120"
+        title="1703-06-05_Hermann_Jacob-Paravicini_Vincentius"
+        catalogue_id="000123971"
+        date="1703.06.05">
+   <persons>
+      <author>
+         <person>
+            <gnd>(DE-588)119112450</gnd>
+            <name>Hermann, Jacob,</name>
+            <date>1678-1733</date>
+         </person>
+      </author>
+      <recipient>
+         <person>
+            <gnd>no_GND</gnd>
+            <name>Paravicini, Vincentius,</name>
+            <date>1644-1726,</date>
+         </person>
+      </recipient>
+      <mentioned>
+         <person>
+            <gnd>no_GND</gnd>
+            <name>Scheuchzer, Johann Jakob</name>
+            <date>1672-1733</date>
+         </person>
+         <person>
+            <gnd>no_GND</gnd>
+            <name>Thomasius, Christian</name>
+            <date>1655-1722</date>
+         </person>
+         <person>
+            <gnd>(DE-588)118624369</gnd>
+            <name>Tschirnhaus, Ehrenfried Walther &lt;&lt;von&gt;&gt;</name>
+            <date>1651-1708</date>
+         </person>
+      </mentioned>
+   </persons>
+   <images>
+      <facsimile src="http://www.ub.unibas.ch/digi/bez/bernoullibriefe/jpg/bernoulli-jpg/BAU_5_000123971_191.jpg"/>
+      <facsimile src="http://www.ub.unibas.ch/digi/bez/bernoullibriefe/jpg/bernoulli-jpg/BAU_5_000123971_192.jpg"/>
+   </images>
+   <text>
+      <p>
+         <facsimile src="http://www.ub.unibas.ch/digi/bez/bernoullibriefe/jpg/bernoulli-jpg/BAU_5_000123971_191.jpg"/> Vir pl[urime] reverende, Fautor colendissime</p>
+      <p>Ene 1691
+
+oder
+
+Thomermannum
+</p>
+   </text>
+</letter>
