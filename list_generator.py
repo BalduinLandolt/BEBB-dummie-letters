@@ -32,7 +32,7 @@ def create_list_of_existing_system_numbers():
     res = ""
     for file in files:
         print(file)
-        sys_no = get_by_name(file.__str__())
+        sys_no = get_by_name(len(file))
         res += sys_no + "\n"
 
     print("Result: ")
@@ -49,4 +49,32 @@ def load_all_numbers():
     res = []
     with open("input/all_numbers.txt") as f:
         res = f.readlines()
-    print("found numbers: " + str(res.__sizeof__()))
+    print("found numbers: " + str(len(res)))
+
+
+def generate_output_list():
+    all = get_list("input/all_numbers.txt")
+    existing = get_list("input/existing_numbers.txt")
+    res = []
+    for e in all:
+        if e not in existing:
+            res.append(e)
+    print("had {}, now having {} entries".format(len(all), len(res)))
+    print(res)
+    print("writing result to file...")
+    with open("output/out_list.txt", "w") as out_file:
+        print(res, file=out_file)
+    print("done.")
+
+
+
+def get_list(path):
+    print("fetching list in path: {}".format(path))
+    tmp = []
+    res = []
+    with open(path) as f:
+        tmp = f.readlines()
+    for s in tmp:
+        res.append(s.strip())
+    print(res)
+    return res
