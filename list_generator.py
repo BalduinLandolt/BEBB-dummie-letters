@@ -1,5 +1,4 @@
 import os
-import lxml
 from os import listdir
 from lxml import etree
 
