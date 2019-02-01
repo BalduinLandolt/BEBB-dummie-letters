@@ -1,4 +1,4 @@
-import list_generator, dummie_generator, test, read_marc
+import list_generator, dummie_generator, read_marc
 
 print("Running...")
 
