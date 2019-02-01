@@ -3,6 +3,7 @@ from pymarc import MARCReader
 def read_mc_test():
     print("reading example")
     read_mc("000054744")
+    read_mc("000054745")
 
 
 def read_mc(sys_no):

@@ -53,6 +53,10 @@ def load_all_numbers():
 
 
 def generate_output_list():
+    if os.path.isfile("./output/out_list.txt"):
+        print("output file already exists.\nabort.")
+        return
+
     all = get_list("input/all_numbers.txt")
     existing = get_list("input/existing_numbers.txt")
     res = []
@@ -63,7 +67,8 @@ def generate_output_list():
     print(res)
     print("writing result to file...")
     with open("output/out_list.txt", "w") as out_file:
-        print(res, file=out_file)
+        for s in res:
+            out_file.write(s+"\n")
     print("done.")
 
 
