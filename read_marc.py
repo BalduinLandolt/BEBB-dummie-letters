@@ -16,7 +16,7 @@ def read_mc(sys_no):
     reader = MARCReader(bytes(data), force_utf8=True, to_unicode=True)
     #print(reader)
     tmp = next(reader)
-    #print(tmp)
+    print(tmp)
     #print("date:")
     #print(get_date(tmp))
     return tmp

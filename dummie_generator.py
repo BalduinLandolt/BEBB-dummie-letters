@@ -27,11 +27,62 @@ def generate_dummie(marc, id):
     tree = etree.parse("input/xml_template.xml")
     root = tree.getroot()
 
-    """!!! page_id !!!"""
+    """!!! TODO: page_id !!!"""
 
-    root.set("bla", "bli")
+    # ad meta data to tree
+    date = read_marc.get_date(marc)
+    title = date.replace(".", "-") + "_"
+    authors = read_marc.get_author(marc)
+    author_string = get_name_string(authors)
+    title = title + author_string + "-"
+    recipients = read_marc.get_recipient(marc)
+    recipient_string = get_name_string(recipients)
+    title = title + recipient_string
+    root.set("title", title)
+    root.set("catalogue_id", id)
+    root.set("date", date)
+
+    elem = root[0]
+    e_author = etree.Element("author")
+    for author in authors:
+        print("autor: {}".format(author))
+        e_p = etree.Element("person")
+        e_author.append(e_p)
+        e_gnd = etree.Element("gnd")
+        e_p.append(e_gnd)
+    elem.append(e_author)
+
+    for r in recipients:
+        print("recipient: {}".format(r))
 
     print(etree.tostring(root, pretty_print=True))
+
+    # generate file name
+    filename = "testfile.xml"
+
+    write_file(tree, filename)
+
+    print("done writing file to disk.")
+
+
+def write_file(tree, filename):
+    print("Writing file: {}".format(filename))
+
+    with open("output/xml/" + filename, "wb") as out_file:
+        out_file.write(etree.tostring(tree, pretty_print=True))
+
+
+def get_name_string(pp):
+    names = ""
+    for p in pp:
+        n = p.get("name")
+        n = n.replace(",", "")
+        n = n.replace(".", "")
+        n = n.replace("'", "")
+        n = n.replace(" ", "_")
+        names = n + "-"
+    names = names[0:-1]
+    return names
 
 
 """
